@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Take Snapshot</title>
+</head>
+<body>
+
+<script src="webcam.js"></script>
+
+<div id="my_camera" style="width:400px; height:320px;"></div>
+<div id="my_result"></div>
+
+
+<form action="/photo" name="myform" method="post" enctype="multipart/form-data">
+    <input id="mydata" type="hidden" name="mydata" value="">
+    <button type="submit">Submit photo to server</button>
+</form>
+
+
+
+    <script language="JavaScript">
+        Webcam.attach( '#my_camera' );
+
+        function take_snapshot() {
+
+        Webcam.snap( function(data_uri) {
+        var raw_image_data = data_uri.replace(/^data\:image\/\w+\;base64\,/, '');
+
+        document.getElementById('mydata').value = raw_image_data;
+
+
+
+    } );
+    }
+    </script>
+
+    <a href="javascript:void(take_snapshot())">Take Snapshot</a>
+
+</body>
+</html>
