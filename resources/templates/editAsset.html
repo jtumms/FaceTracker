@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--<head>-->
-    <!--<link rel="stylesheet" href="style.css">-->
-    <!--<link href='//fonts.googleapis.com/css?family=Verdana:400,700,300,200' rel='stylesheet' type='text/css'>-->
-    <!--<link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>-->
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href='//fonts.googleapis.com/css?family=Verdana:400,700,300,200' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-    <!--&lt;!&ndash; For-Mobile-Apps-and-Meta-Tags &ndash;&gt;-->
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
-    <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
-    <!--<meta name="keywords" content="Dark Sign In Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />-->
-    <!--<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>-->
-    <!--&lt;!&ndash; //For-Mobile-Apps-and-Meta-Tags &ndash;&gt;-->
-    <!--<meta charset="UTF-8">-->
-    <!--<meta charset="UTF-8">-->
-<!--</head>-->
+    <!-- For-Mobile-Apps-and-Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Dark Sign In Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //For-Mobile-Apps-and-Meta-Tags -->
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+</head>
 <body>
     <title>Edit Asset</title>
     <div class="container">
-        {{#rootObjArray}}
 
         <form action="/edit-asset" method="post">
 
+
             <input type="hidden" value="{{id}}" name="id"/><br>
-            First: <input type="text" value="{{firstName}}" name="firstName"><br>
-            Last: <input type="text" value="{{lastName}}" name="lastName"<br>
+            First: <input type="text" value="{{firstName}}" name="firstName">
+            Last: <input type="text" value="{{lastName}}" name="lastName"><br>
             Height(inches): <input type="text" value="{{height}}" name="height"><br>
             Weight(lb): <input type="text" value="{{weight}}" name="weight"><br>
             Last address: <input type="text" value="{{lastAddress}}" name="lastAddress"><br>
@@ -34,18 +34,12 @@
             <option value="Brown">Brown</option>
             <option value="Hazel">Hazel</option>
             <option value="Other">Other</option>
-            </select>
-            {{/rootObjArray}}
-
-
-
-
-
-
-
+            </select><br><br>
+            <button type="submit">Save Changes</button>
 
 </form>
-        </div>
+
+    </div>
 
 
 
