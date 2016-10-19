@@ -2,22 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Take Snapshot</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='//fonts.googleapis.com/css?family=Verdana:400,700,300,200' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- For-Mobile-Apps-and-Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Dark Sign In Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //For-Mobile-Apps-and-Meta-Tags -->
 </head>
-<body>
 
-<script src="webcam.js"></script>
 
+    <script src="webcam.js"></script>
+<div class="container">
 <div id="my_camera" style="width:400px; height:320px;"></div>
 <div id="my_result"></div>
 
 
 <form action="/photo" name="myform" method="post" enctype="multipart/form-data">
     <input id="mydata" type="hidden" name="mydata" value="">
-    <button type="submit">Submit photo to server</button>
+    <input id="mydata" type="hidden" name="mydata" value="">
+    <input type="text" class="long" placeholder="First Name" required="" name="firstName"><br>
+    <input type="text" class="long" placeholder="Last Name" required="" name="lastName"><br>
+    <input type="text" class="short" placeholder="Height in inches" required="" name="height"><br>
+    <input type="text" class="short" placeholder="Weight in pounds" required="" name="weight"><br>
+    <input type="text" class="xlong" placeholder="Last known address" required="" name="lastAddress"><br>
+    <input type="text" class="xlong" placeholder="Specialized skills" required="" name="specialSkills"><br>
+    <select name="eye color"><br>
+        <option selected disabled>Eye Color</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+        <option value="Brown">Brown</option>
+        <option value="Hazel">Hazel</option>
+        <option value="Other">Other</option>
+    </select>
+    <button type="submit">Save data to server</button>
 </form>
-
-
 
     <script language="JavaScript">
         Webcam.attach( '#my_camera' );
@@ -28,14 +51,12 @@
         var raw_image_data = data_uri.replace(/^data\:image\/\w+\;base64\,/, '');
 
         document.getElementById('mydata').value = raw_image_data;
-
-
-
     } );
     }
     </script>
 
     <a href="javascript:void(take_snapshot())">Take Snapshot</a>
 
+</div>
 </body>
 </html>
