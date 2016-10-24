@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='//fonts.googleapis.com/css?family=Verdana:400,700,300,200' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- For-Mobile-Apps-and-Meta-Tags -->
+    <meta name="viewport" content="wi   dth=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Dark Sign In Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //For-Mobile-Apps-and-Meta-Tags -->
+</head>
+<h1>All Assets</h1>
+
+{{#name}}
+<h2><strong><small>Logged in as:</small> </strong>{{name}}</h2><br>
+{{/name}}
+
+<div class="container">
+<body>
+
+
+
+
+<table>
+<tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Height</th>
+    <th>Weight</th>
+    <th>Last Address</th>
+    <th>Specialized Skills</th>
+    <th>Entered By</th>
+    <th>Eye Color</th>
+    <th>Image</th>
+</tr>
+{{#rootObjArray}}
+<tr>
+    <td>{{firstName}}</td>
+    <td>{{lastName}}</td>
+    <td>{{height}}</td>
+    <td>{{weight}}</td>
+    <td>{{lastAddress}}</td>
+    <td>{{specialSkills}}</td>
+    <td>{{userEntered}}</td>
+    <td>{{eyeColor}}</td>
+        <td><img src="images/{{imageURL}}" width="120" height="100"/></td>
+    <td>
+        {{#isMe}}
+        <form action="/delete-asset" method="post">
+            <input type="hidden" value="{{id}}" name="id"/>
+            <button type="submit">Delete</button>
+        </form>
+        {{/isMe}}
+    </td>
+    <td>
+        {{#isMe}}
+        <form action="/edit-asset" method="get">
+            <a href="/edit-asset?id={{id}}">Edit</a>
+        </form>
+
+        {{/isMe}}
+    </td>
+
+</tr>
+{{/rootObjArray}}
+</table>
+</div>
+<form action="/photo" method="get">
+    <button type="submit">Add new Asset</button>
+</form>
+<br>
+<form action="/logout" method="post">
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>
